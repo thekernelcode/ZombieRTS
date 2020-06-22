@@ -7,7 +7,7 @@ public class PlayerTestMove : MonoBehaviour
 
     public float speed = 10f;
 
-    private Transform target;
+    public Transform target;
     private int waypointIndex = 0;
 
     // Start is called before the first frame update
@@ -30,14 +30,14 @@ public class PlayerTestMove : MonoBehaviour
 
     void GetNextWayPoint()
     {
-        if (waypointIndex >= Waypoints.waypoints.Length)
-        {
-            waypointIndex = 0;
-            return;
-        }
+        //if (waypointIndex >= Waypoints.waypoints.Length)
+        //{
+        //    waypointIndex = 0;
+        //    return;
+        //}
 
-        target = Waypoints.waypoints[waypointIndex];
+        //target = Waypoints.waypoints[waypointIndex];
 
-        waypointIndex++;
+        //waypointIndex++;
     }
 }
