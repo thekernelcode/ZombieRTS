@@ -9,10 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2759932124754745842}
-  - component: {fileID: 4826473296255112081}
+  - component: {fileID: 7423107279320825135}
+  - component: {fileID: 1785715920525317264}
+  - component: {fileID: -4339593528074016840}
   m_Layer: 0
   m_Name: Trees
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +45,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4826473296255112081
+--- !u!136 &7423107279320825135
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159226644970662881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 3.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -0.42, y: 2, z: 1.25}
+--- !u!54 &1785715920525317264
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159226644970662881}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-4339593528074016840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,9 +84,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1159226644970662881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7b67ba6f8c3f69459bcc925d29809d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b3c465e76ea38f418f9489c67866137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceType: 0
+  timeToHarvest: 0
+  availableResource: 20
+  numberOfGatherers: 0
 --- !u!1 &1783556081637809514
 GameObject:
   m_ObjectHideFlags: 0
