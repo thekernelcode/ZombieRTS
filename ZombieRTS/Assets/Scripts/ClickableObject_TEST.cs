@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class ClickableObject_TEST : MonoBehaviour
 {
-    public NodeManager.ResourceTypes heldResourceType;
+    public NodeManager.ResourceTypes heldResourceType;      //---I THINK THIS IS DEFAULTING TO WOOD AS ITS FIRST IN ENUM
 
     private PlayerTestMove playerTestMovement;
 
     public bool isGathering = false;
 
-    public int heldResource;
-    public int maxHeldResource;
+    public int heldResource;                                //---THIS IS JUST THE QUANTITY OF 'x' RESOURCE.  IT IS UNAWARE OF RESOURCE TYPE...DOES THIS MEAN
+    public int maxHeldResource;                             //---CURRENTLY WE CAN ONLY HOLD ONE TYPE OF RESOURCE?...ENUM MAY NEED TO BE DICTIONARY TO HAVE MULTIPLE RESOURCES CARRIED
 
     public Transform dropOffPoint;
 
@@ -26,6 +26,9 @@ public class ClickableObject_TEST : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /*-------MOVEMENT-------*/
+
         if (heldResource >= maxHeldResource)
         {
             playerTestMovement.target = dropOffPoint;
