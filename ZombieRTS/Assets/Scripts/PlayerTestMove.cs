@@ -8,7 +8,7 @@ public class PlayerTestMove : MonoBehaviour
     public float speed = 10f;
 
     public Transform target;
-    private int waypointIndex = 0;
+    // private int waypointIndex = 0;
 
     // Start is called before the first frame update
     void Start()

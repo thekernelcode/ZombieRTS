@@ -69,6 +69,8 @@ public class ClickableObject_TEST : MonoBehaviour
             heldResourceType = hitObject.GetComponent<NodeManager>().resourceType;
             isGathering = true;
         }
+
+      
     }
 
     public void OnTriggerExit(Collider otherCollider)
@@ -92,7 +94,7 @@ public class ClickableObject_TEST : MonoBehaviour
             {
                 heldResource++;
             }
-            
+            // TODO - change held resource to be resource dependent.  Right now keeps ticking up regardless of resource type.  Multiple ints - resource dependent.
         }
     }
 }

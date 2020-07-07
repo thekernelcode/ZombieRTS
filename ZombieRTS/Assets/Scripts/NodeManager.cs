@@ -42,7 +42,7 @@ public class NodeManager : MonoBehaviour
     {
         while (true)  // While IEnumerator is running
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(timeToHarvest);
             ResourceGather();
 
         }
