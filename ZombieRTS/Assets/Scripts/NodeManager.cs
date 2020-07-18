@@ -6,7 +6,9 @@ using UnityEngine;
 public class NodeManager : MonoBehaviour
 {
 
-    public enum ResourceTypes { Wood, Stone, Clay }     // Declare Enum
+    public enum ResourceTypes { Wood, Stone, Clay }     // Declare Enum  TODO - THIS PROBABLY NEEDS TO BE SET OUT INTO A 'RESOURCE CLASS'
+                                                        // CLASS COULD HAVE THINGS LIKE, AMOUNT AVAILABLE, TIME TO HARVEST, HARDNESS SO ONLY SOME TOOLS CAN USE
+                                                        // UNLOCK STAGE DEPENDING ON TECH LEVEL
         
     public ResourceTypes resourceType;                  // Declare one of the enums
 

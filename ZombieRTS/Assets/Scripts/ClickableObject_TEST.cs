@@ -5,14 +5,21 @@ using UnityEngine;
 
 public class ClickableObject_TEST : MonoBehaviour
 {
-    public NodeManager.ResourceTypes heldResourceType;      //---I THINK THIS IS DEFAULTING TO WOOD AS ITS FIRST IN ENUM
 
     private PlayerTestMove playerTestMovement;
 
+    public NodeManager.ResourceTypes heldResourceType;      //---I THINK THIS IS DEFAULTING TO WOOD AS ITS FIRST IN ENUM
+
     public bool isGathering = false;
 
-    public int heldResource;                                //---THIS IS JUST THE QUANTITY OF 'x' RESOURCE.  IT IS UNAWARE OF RESOURCE TYPE...DOES THIS MEAN
-    public int maxHeldResource;                             //---CURRENTLY WE CAN ONLY HOLD ONE TYPE OF RESOURCE?...ENUM MAY NEED TO BE DICTIONARY TO HAVE MULTIPLE RESOURCES CARRIED
+    //public int heldResource;                                //---THIS IS JUST THE QUANTITY OF 'x' RESOURCE.  IT IS UNAWARE OF RESOURCE TYPE...DOES THIS MEAN
+    //public int maxHeldResource;                             //---CURRENTLY WE CAN ONLY HOLD ONE TYPE OF RESOURCE?...ENUM MAY NEED TO BE DICTIONARY TO HAVE MULTIPLE RESOURCES CARRIED
+
+    public int heldWood;
+    public int maxHeldWood;
+
+    public int heldClay;
+    public int maxHeldClay;
 
     public Transform dropOffPoint;
 
@@ -27,12 +34,13 @@ public class ClickableObject_TEST : MonoBehaviour
     void Update()
     {
 
-        /*-------MOVEMENT-------*/
+        /*-------MOVEMENT-------*/ 
+        //TODO - FIXME!!  HELD RESOURCE HAS BEEN SPLIT INTO INDIVIDUAL SECTIONS
 
-        if (heldResource >= maxHeldResource)
-        {
-            playerTestMovement.target = dropOffPoint;
-        }
+        //if (heldResource >= maxHeldResource)
+        //{
+        //    playerTestMovement.target = dropOffPoint;
+        //}
 
         if (Input.GetMouseButtonUp(0))
         {
@@ -92,7 +100,15 @@ public class ClickableObject_TEST : MonoBehaviour
             yield return new WaitForSeconds(1);
             if (isGathering)
             {
-                heldResource++;
+                //heldResource++;
+                if (heldResourceType == NodeManager.ResourceTypes.Wood)
+                {
+                    heldWood++;
+                }
+                else if (heldResourceType == NodeManager.ResourceTypes.Clay)
+                {
+                    heldClay++;
+                }
             }
             // TODO - change held resource to be resource dependent.  Right now keeps ticking up regardless of resource type.  Multiple ints - resource dependent.
         }

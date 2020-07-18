@@ -14540,8 +14540,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldResourceType: 0
   isGathering: 0
-  heldResource: 0
-  maxHeldResource: 30
+  heldWood: 0
+  maxHeldWood: 30
+  heldClay: 0
+  maxHeldClay: 30
   dropOffPoint: {fileID: 5006512736621586486}
 --- !u!4 &1575064012 stripped
 Transform:

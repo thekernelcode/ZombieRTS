@@ -9,6 +9,9 @@ public class ResourceManager : MonoBehaviour
     public float clay;
 
     public float maxWood;
+    public float maxStone;
+    public float maxClay;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,6 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
+
 }
